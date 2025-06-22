@@ -1,7 +1,8 @@
-###########
-# SCRIPT: 00_setup_R.R
-# PURPOSE: Install required R packages 
-###########
+********************
+* SCRIPT: 00_main.do
+* PURPOSE:  This script runs all data preparation steps and
+*            generates tables and figures for the paper: 
+********************
 
 //-----------------------------------------------------------------------------------//
 // 1. Set global paths
