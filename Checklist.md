@@ -12,6 +12,7 @@ For each task, tick the box (`✔`) or mark **NA** if not applicable, and record
 | Clone or download the GitHub repository; record the commit hash used | | |
 | Invite co‑authors or supervisor as collaborators with appropriate permissions | | |
 | Set up issue labels and a project board (optional but recommended) | | |
+| Adapt this checklist to project needs | | |
 
 ## 2&nbsp;·&nbsp;Understand & Customise Folder Structure
 
