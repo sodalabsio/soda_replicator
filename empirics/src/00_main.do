@@ -3,6 +3,13 @@
 * PURPOSE:  This script runs all data preparation steps and
 *            generates tables and figures for the paper: 
 ********************
+* 1. Set global paths
+* 2. Set Stata options
+* 3. Install packages
+* 4. Data Preparation
+* 5. Analysis
+* 6. Tables & Figures
+********************
 
 //-----------------------------------------------------------------------------------//
 // 1. Set global paths
@@ -63,20 +70,27 @@ rscript using "$path/src/dataprep/01_MyDataCleaningRscript.R", args("$path")   r
 * 4.2 Data Cleaning Step 2 in Stata
 do "$path/src/dataprep/02_MyDataCleaningStataDo.do"
 
+* 4.3 Combine individual data files to final dataset
+do "$path/src/dataprep/0X_MyFinalDatasetCreationDo.do"
 
 //-----------------------------------------------------------------------------------//
 // 5. Analysis
 //-----------------------------------------------------------------------------------//
 
-* 5.1 Data Analysis Step 1 in Stata
-do "$path/src/analysis/01_MyAnalysisStataDo.do"
+* 5.1 Descriptive Analysis in Stata
+do "$path/src/analysis/01_MyDescriptiveAnalysisDo.do"
 
-* 5.2 Data Analysis Step 1 in R
-rscript using "$path/src/analysis/01_MyAnalysisRscript.R", args("$path") rversion(3.6) 
+* 5.2 Regression Analysis  in Stata
+do "$path/src/analysis/02_MyRegressionAnalysisDo.do"
+
+* 5.3 Data Analysis Step 1 in R
+rscript using "$path/src/analysis/03_MyAnalysisRscript.R", args("$path") rversion(3.6) 
 
 //-----------------------------------------------------------------------------------//
 // 6. Tables & Figures
 //-----------------------------------------------------------------------------------//
+
+*If separate from analysis files in 5.
 
 * 6.1 Create figures 
  
