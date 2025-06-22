@@ -18,7 +18,7 @@ For each task, tick the box (`✔`) or mark **NA** if not applicable, and record
 | Task | ✔ / NA | Date |
 |---|---|---|
 | Read top‑level `README.md`   | | |
-| Confirm standard directory structure (`data/raw`, `data/intermediate`, `data/processed`, `scripts`, `output`, `paper`, etc.) | | |
+| Confirm standard directory structure (`data/raw`, `data/intermediate`, `scripts`, `output`, `paper`, etc.) | | |
 | Add any missing subfolders (e.g. `data/external`, `logs`, `notebooks`) | | |
 | Add paths to dropbox/figshare paths in scripts  for large raw data | | |
 | Search/replace hard‑coded file paths in all scripts & configs | | |
