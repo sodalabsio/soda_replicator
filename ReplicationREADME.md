@@ -2,17 +2,7 @@
 
 
 ---
-title: "README and Replication Guidance"
-format:
-   html:   # for inclusion in replication website
-     toc: true
-   # gfm:    # for display on GitHub.com
-   #  toc: true
-   #  toc-location: body
-   # pdf:    # for submission in replication.zip
-   #  toc: true
-   #  toc-location: body
-bibliography: references.bib
+title: "Replication reposiotry for [PAPER TITLE] "
 contributors:
   - [AUTHOR 1]
   - [AUTHOR 2]
@@ -96,11 +86,27 @@ Random seed is set at line ___ of program ___
 
 ### Memory and Runtime
 
+Approximate	time	needed	to	reproduce	the	analyses on	a	standard	2023 machine: 2	hours.
+The	code	was	last	run	on	a	MacBook	Pro M3 (2023)	with	MacOS	version	14.4.1.
+
 ## Replication Guidance
 
 <!---- see instructions: https://social-science-data-editors.github.io/template_README/template-README.html --->
 
 ### Summary Instructions
+
+- Set	up	the	folder	hierarchy	in	the	Replication	folder	like	this:
+  – `code`
+    - `analysis`
+    - `dataprep`
+  – `data`
+    - `analysis`
+    - `interim`
+    - `proprietary`
+    - `raw`
+  – `output`
+    - `figures`
+    - `tables`
 
 - Edit `code/config.do` to adjust the default path
 - Run `code/00_setup/main-setup.do` once on a new system to set up the working environment. 
