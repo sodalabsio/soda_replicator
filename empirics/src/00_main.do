@@ -15,9 +15,6 @@ cd "$path"
 // global rpath "/Library/Frameworks/R.framework/Resources/bin/R"
 global RSCRIPT_PATH "" // set RSCRIPT_PATH or let rscript find it automatically (default)
 
-* Set user name and password to connect to WRDS
-global wrds_user_name "davidkre"
-global wrds_password "FilterTheBullsh*tAll2gether4Real"
 
 
 //-----------------------------------------------------------------------------------//
