@@ -7,43 +7,42 @@ Whereas a journal replication package is the final project state bundled into a 
 
 While most recommendations here are agnostic of your choice of data science and typesetting language, this readme adds some language-specific comments in a section below.
 
-
 # Directory Structure
-Before we discuss the directory structure, it is important to stress that you are not meant to use the template as a single Git repository. We host the three separate folders (`data`, `quant`, and `markup` jointly in one place so that you can download them in one go and have a good overview of the entire structure. In your project, you administer them as distinct repositories (`quant` and `markup`) and one non-Git folder (`data`) located in one parent directory.
+Before we discuss the directory structure, it is important to stress that you are not meant to use the template as a single Git repository. We host the three separate folders (`data`, `code`, and `paper` jointly in one place so that you can download them in one go and have a good overview of the entire structure. In your project, you administer them as distinct repositories (`code` and `paper`) and one non-Git folder (`data`) located in one parent directory.
 
-To summarize the contents: `data` holds the data, `quant` holds the quantitative analysis code, and `markup` holds the markup code.
+To summarize the contents: `data` holds the data, `code` holds the quantitative analysis code, and `paper` holds the markup code.
 
 ## Data
-The `data` directory holds the project's data sets. Raw input data, as downloaded from the source or as collected in an experiment, goes into `data/raw`. Processed, evaluation-ready data belongs into `data/analysis`. In projects with long data cleaning pipelines, it might make sense to add a `data/intermediate` folder.
+The `data` directory holds the project's data sets. Raw input data, as downloaded from the source or as collected in an experiment, goes into `data/raw`. Processed, evaluation-ready data belongs into `data/analysis`. In projects with long data cleaning pipelines, it might make sense to add a `data/interim` folder.
 
 As already mentioned, Git is designed for code, not for large data sets. It is a good idea to store the data in a folder synced to the cloud, but not to manage it with Git.
 
 If there are multiple input data sets, each of them should have its separate directory in `data/raw`. The template contains two fictional examples: population data downloaded from `example.com` and weather data downloaded from `example.org`. The data set publisher's documentation, sometimes referred to as code book, and a text file documenting the download URL and the download date should accompany the data files. Online resources can change over time. Hence, store all of this information together in one location from the start.
 
-Similarly, different sets of analysis data can be organized into multiple folders in `data/analysis`. They do, of course, not require extra documentation on where they came from or on which day they were created. The information on how to create the files from the raw data belongs into the `quant` directory. And that code should produce the analysis data irrespective of the execution date. It is a good habit to document the analysis data files in that code because (i) this checks the documentation into version control and (ii) it keeps the explanations close to the logic creating the data.
+Similarly, different sets of analysis data can be organized into multiple folders in `data/analysis`. They do, of course, not require extra documentation on where they came from or on which day they were created. The information on how to create the files from the raw data belongs into the `code` directory. And that code should produce the analysis data irrespective of the execution date. It is a good habit to document the analysis data files in that code because (i) this checks the documentation into version control and (ii) it keeps the explanations close to the logic creating the data.
 
-## Quant
-The quantitative analysis code, covering all steps from the raw data to the results shown in the paper, belong into the `quant` directory. This is your R, Python, Stata, Julia, C++ code. It should be managed with Git.
+## Code
+The quantitative analysis code, covering all steps from the raw data to the results shown in the paper, belong into the `code` directory. This is your R, Python, Stata, Julia, C++ code. It should be managed with Git.
 
-The preprocessing steps turning the `data/raw` into the `data/analysis` files are in `quant/preprocess` and the steps deriving insights from the `data/analysis` data are in `quant/analysis`. You should, especially in larger projects, further divide the `quant/preprocess` and `quant/analysis` into sub-folders. You could have one folder per input data set in `quant/preprocess`, in which you do all the preprocessing of the respective data set. In a file at the `quant/preprocess` level (not in a sub-directory), you then only merge the data. This template illustrates this with example files.
+The preprocessing steps turning the `data/raw` into the `data/analysis` files are in `code/dataprep` and the steps deriving insights from the `data/analysis` data are in `code/analysis`. You should, especially in larger projects, further divide the `code/dataprep` and `code/analysis` into sub-folders. You could have one folder per input data set in `code/dataprep`, in which you do all the preprocessing of the respective data set. In a file at the `code/dataprep` level (not in a sub-directory), you then only merge the data. This template illustrates this with example files.
 
-The advantage of placing `quant` in the same parent directory as `data` is that you can easily reference data sets using relative paths. No paths have to be adjusted when running the code from another computer. `../data/raw/population/population.csv` remains valid.
+The advantage of placing `code` in the same parent directory as `data` is that you can easily reference data sets using relative paths. No paths have to be adjusted when running the code from another computer. `../data/raw/population/population.csv` remains valid (`..` moves up one level from the current directory).
 
-## Markup
-The generic term _markup_ covers, e.g., LaTeX and Markdown, and hence the code that you typeset your paper in. This folder is only relevant to people who write their manuscripts locally. Overleaf users who host their projects entirely on that platform and do not sync them with Dropbox do not need this folder.
+## Paper
+The template's `paper` folder organization assumes users to either write their manuscripts locally or to connect their Overleaf project to Dropbox folder or GitHub. Overleaf users who host their projects entirely on that platform (without external connections) only store tables and figures in `paper`.
 
-As in the case of `quant`, you should control the contents of the `markup` directory with Git - as long as you use a markup language. Students who are not yet familiar with LaTeX or Markdown and still use a word processor like Microsoft Word or Libre Office Writer may not experience large benefits from using Git.
+As in the case of `code`, you should control the contents of the `paper` directory with Git - as long as you use a markup language. Students who are not yet familiar with LaTeX or Markdown and still use a word processor like Microsoft Word or Libre Office Writer may not experience large benefits from using Git.
 
-`markup` entails three sub-folders: `draft`, `results`, and `presentation`. Throughout the life cycle of a project, there are exploratory phases. You want to try out different empirical models to identify the underlying pattern in the data, and you experiment with theory to craft a framework that your estimations fit into. The `results` folder is the location to collect and discuss ideas. It is the foundation for the official manuscript in `draft`. `presentation` holds the markup code for seminar and conference presentations. As a PhD student also presenting posters, you might have an additional `poster` folder.
+`paper` entails three sub-folders: `draft`, `results`, and `presentation`. Throughout the life cycle of a project, there are exploratory phases. You want to try out different empirical models to identify the underlying pattern in the data, and you experiment with theory to craft a framework that your estimations fit into. The `results` folder is the location to collect and discuss ideas. It is the foundation for the official manuscript in `draft`. `presentation` holds the markup code for seminar and conference presentations. As a PhD student also presenting posters, you might have an additional `poster` folder.
 
-`quant` and `markup` are separate repositories because your quantitative analysis code and the work on your manuscript are often not in sync. Joining these two streams of work can lead to messy commit histories and chaotic branches.
+`code` and `paper` are separate repositories because your quantitative analysis code and the work on your manuscript are often not in sync. Joining these two streams of work can lead to messy commit histories and chaotic branches.
 
 # Virtual Environments
 Data science software receives updates over time. R packages are not static. Developers fix bugs and change function behavior across releases. It, therefore, happens that you re-execute your code a few years after you wrote it and obtain different results. Because your replication package needs to reproduce the results shown in the paper, you then start digging through previous versions of the programming language and of the packages that you used. Unfortunately, many packages are not isolated pieces of software. Packages have dependencies. Hence, you puzzle together different package version combinations. In the end, you browse tens of thousands of lines of code and spend days and figuring out the source of a discrepancy.
 
 Virtual environments prevent such drama. The `renv` package in R and the `venv` module in Python track package versions at the project level and allow you to use different versions across projects. You can use version 1.0 in one project and version 1.2 in another project. When you come back to a study at a later point or when someone else wants to execute your code, the software automatically obtains the correct package version from the automatically created configuration file and computes the same results as you did initially.
 
-So, before you write any code, open the `quant` directory and follow the installation instructions and introductions for [`renv`](https://rstudio.github.io/renv/), [`venv`](https://docs.python.org/3/library/venv.html), or alternatively [`conda`](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html).
+So, before you write any code, open the `code` directory and follow the installation instructions and introductions for [`renv`](https://rstudio.github.io/renv/), [`venv`](https://docs.python.org/3/library/venv.html), or alternatively [`conda`](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html).
 
 This template contains automatically created example configuration files.
 
