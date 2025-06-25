@@ -8,28 +8,32 @@ This repository provides a **template for reproducible, collaborative applied-ec
 
 ### 1. Installation 🚀
 
-1.1  Download the template: **Code › Download ZIP** (or `gh repo clone <url>`)  
+1.1  Download the template: **Code › Download ZIP**.
 
-1.2  Unpack & rename the folder to your *project name*  (Avoid namespace clashes )
+1.2  Unpack & rename the folder to your *project name* (Avoid namespace clashes).
 
-1.3   
+1.3 Make sure you have Git installed and GitHub [configured](https://docs.github.com/en/get-started/git-basics/set-up-git).
++ **Tip:** New to Git? Follow the *Hello World* [tutorial](https://guides.github.com/activities/hello-world).
+
+1.4 Open the GitHub website and create two empty private repositories with the named `name-of-your-project_code` and `name-of-your-project_paper`, with `name-of-your-project` being a short name (probably one or two words) for your research project.
+
+1.5 Rename the `code` and `paper` folders in the just downloaded template directory on your computer to `name-of-your-project_code` and `name-of-your-project_paper` respectively.
+
+1.6 Open the terminal (Git Bash on Windows) locally in the `name-of-your-project_code` folder and enter the following commands:
+
 ```bash
-   cd <project-name>
-   git init
-   gh repo create <org>/<project-name> --private --source=. --remote=origin
-   git add .
-   git commit -m "Initial commit from SoDa template"
-   git push -u origin main
-   ```
+git init
+git add .
+git commit -m "initial commit"
+git remote add origin https://github.com/your-github-name/name-of-your-project_code.git
+git push -u origin main
+```
 
-1.4 Create a **new** Git history and remote backing repo 
-   + On GitHub → **Settings › Collaborators** → add co-authors & supervisors | Give everyone access |
+1.7 Repeat step 1.6 for the `name-of-your-project_paper` directory.
+
+1.8 Configure the two GitHub repositories on the website:
+   + **Settings › Collaborators** → add co-authors & supervisors | Give everyone access |
    + (Optional) Protect `main` branch & enable GitHub Actions | Enforce code review & CI |
-
-
-+ **Tip:** New to Git? Follow the *Hello World* tutorial  <https://guides.github.com/activities/hello-world/>
-
- 
 
 ### 2. Adapt the project checklist 📝
 
