@@ -4,7 +4,7 @@ This repository provides a **template for reproducible, collaborative applied-ec
 
 ---
 
-## How to use this repo
+## How to Use This Repo
 
 ### 1. Installation 🚀
 
@@ -17,9 +17,7 @@ This repository provides a **template for reproducible, collaborative applied-ec
 
 1.4 Open the GitHub website and create two empty private repositories with the named `name-of-your-project_code` and `name-of-your-project_paper`, with `name-of-your-project` being a short name (probably one or two words) for your research project.
 
-1.5 Rename the `code` and `paper` folders in the just downloaded template directory on your computer to `name-of-your-project_code` and `name-of-your-project_paper` respectively.
-
-1.6 Open the terminal (Git Bash on Windows) locally in the `name-of-your-project_code` folder and enter the following commands:
+1.5 Open the terminal (Git Bash on Windows) locally in the `code` folder and enter the following commands:
 
 ```bash
 git init
@@ -29,13 +27,13 @@ git remote add origin https://github.com/your-github-name/name-of-your-project_c
 git push -u origin main
 ```
 
-1.7 Repeat step 1.6 for the `name-of-your-project_paper` directory.
+1.7 Repeat step 1.6 for the `paper` directory.
 
 1.8 Configure the two GitHub repositories on the website:
    + **Settings › Collaborators** → add co-authors & supervisors | Give everyone access |
    + (Optional) Protect `main` branch & enable GitHub Actions | Enforce code review & CI |
 
-### 2. Adapt the project checklist 📝
+### 2. Adapt the Project Checklist 📝
 
 2.1 Open **`Checklist.md`** → [template](https://github.com/cdueben/soda_replicator/blob/main/Checklist.md).  
 
@@ -45,11 +43,11 @@ git push -u origin main
 
 ```bash
    git add Checklist.md
-   git commit -m "Customise replication checklist"
-   git push
+   git commit -m "customize replication checklist"
+   git push origin main
 ```
 
-### 3. Understand the folder structure 🏗️
+### 3. Understand the Folder Structure 🏗️
 
 ```bash
 project-root/
@@ -63,11 +61,22 @@ project-root/
 └── data/        # <-- lives *outside* the Git repo!
 ```    
 
-**Use absolute paths when scripts reference data!**
+**Use relative paths when scripts reference data!**
 
-### 4. Start coding 👩‍💻👨‍💻
+### 4. Read and Delete Example Files
 
-4.1 Activate the virtual environment in code/ (renv::restore() or python -m venv env).
+4.1 The template contains a number of example files to showcase how to work with it. The readmes in the subdirectories list files and folders which should be deleted before you add you own content. If you do not want to delete them manually, open a terminal (Git Bash on Windows) in the template directory and run the following lines:
+
+```bash
+chmod +x delete_examples.sh
+./delete_examples.sh
+```
+
+Then delete the `delete_examples.sh` file.
+
+### 4. Start Coding 👩‍💻👨‍💻
+
+4.1 Activate the virtual environment in code ([`renv`](https://rstudio.github.io/renv/)/ [`venv`](https://docs.python.org/3/library/venv.html)/ [`conda`](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)).
 
 4.2 Write scripts in code/dataprep and code/analysis.
 
@@ -75,40 +84,38 @@ project-root/
 
 ```bash
 git add code/
-git commit -m "Add first data-prep script"
-git push
+git commit -m "add first data-prep script"
+git push origin main
 ```
-4.4 Verify commits and CI status on GitHub.
+4.4 Verify commits and CI status on GitHub ([GitHub guide](https://docs.github.com/en/get-started/quickstart)).
 
-4.5 GitHub guide: https://docs.github.com/en/get-started/quickstart
-
-### 5. Tick off the checklist ✔️
+### 5. Tick Off the Checklist ✔️
 
 After each milestone:
 
-+ Edit Checklist.md
++ Edit `Checklist.md`.
 
-+ Add a tick (✓) and today’s date, e.g. [x] Import raw data ✓ 2025-06-25
++ Add a tick (`✓`) and today’s date, e.g., [`x`] Import raw data `✓` 2025-06-25.
 
 + Request review via a pull request.
 
-### 6. Run the AI code checker 🤖
+### 6. Run the AI Code Checker 🤖
 
 GitHub Actions automatically:
 
-    + Restores the environment (renv.lock / requirements.txt).
+    + Restore the environment (renv.lock / requirements.txt).
 
-    + Reads Checklist.md for outstanding tasks.
+    + Read Checklist.md for outstanding tasks.
 
-    + Lints code for style and reproducibility.
+    + Lint code for style and reproducibility.
 
-    + Comments results on your pull request.
+    + Comment on your pull request.
 
 ### 7. Create Final Replication Package for Submission
 
-7.1 Follow guidelines from AEA Data editor  https://github.com/AEADataEditor/replication-template
+7.1 Follow [guidelines](https://github.com/AEADataEditor/replication-template) from AEA Data editor.
 
-7.2 Use @cynthiahqy's quarto replication template https://github.com/cynthiahqy/quarto-replication-template
+7.2 Use @cynthiahqy's [quarto replication template](https://github.com/cynthiahqy/quarto-replication-template).
 
 -------------------------
 # Introduction
