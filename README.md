@@ -110,11 +110,6 @@ GitHub Actions automatically:
 
   + Comment on your pull request.
 
-+ Restores the environment (renv.lock / requirements.txt).
-+ Reads Checklist.md for outstanding tasks.
-+ Lints code for style and reproducibility.
-+ Comments results on your pull request.
-
 ### 7. Create Final Replication Package for Submission
 
 7.1 Follow [guidelines](https://github.com/AEADataEditor/replication-template) from AEA Data editor.
