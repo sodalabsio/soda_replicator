@@ -131,7 +131,7 @@ GitHub Actions automatically:
 + [Julian Reif - Stata Coding Guide](https://julianreif.com/guide/)
 
 8.3 R
-+ [Econometrics with R](https://www.econometrics-with-r.org/)
++ [Fixest Walkthrough](https://cran.r-project.org/web/packages/fixest/vignettes/fixest_walkthrough.html)
 + [Hans H. Sievertsen - Applied Economics with R](https://hhsievertsen.github.io/applied_econ_with_r/)
 
 8.4 Python
