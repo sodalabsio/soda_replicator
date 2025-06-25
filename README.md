@@ -41,12 +41,16 @@ This repository provides a **template for reproducible, collaborative applied-ec
 ### 3. Understand the folder structure 🏗️
 
 project-root/
-├── code/        # analysis scripts, renv/venv, tests
-├── paper/       # manuscript (LaTeX/Quarto/Markdown), figs, tables
+├── code/        # dataprep, analysis scripts, renv/venv, tests
+    ├── dataprep/
+    ├── analysis/
+    └── renv/
+├── paper/       # manuscript and slides (LaTeX/Quarto/Markdown), figs, tables
+    ├── draft/
+    ├── presentation/
+    └── results/
 └── data/        # <-- lives *outside* the Git repo!
-    ├── raw/
-    ├── interim/
-    └── analysis/
+    
 
 **Use absolute paths when scripts reference data!**
 
