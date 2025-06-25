@@ -4,34 +4,36 @@ This repository provides a **template for reproducible, collaborative applied-ec
 
 ---
 
-## How to use this repo
+## How to Use This Repo
 
 ### 1. Installation 🚀
 
-1.1  Download the template: **Code › Download ZIP** (or `gh repo clone <url>`)  
+1.1  Download the template: **Code › Download ZIP**.
 
-1.2  Unpack & rename the folder to your *project name*  (Avoid namespace clashes )
+1.2  Unpack & rename the folder to your *project name* (Avoid namespace clashes).
 
-1.3   
+1.3 Make sure you have Git installed and GitHub [configured](https://docs.github.com/en/get-started/git-basics/set-up-git).
++ **Tip:** New to Git? Follow the *Hello World* [tutorial](https://guides.github.com/activities/hello-world).
+
+1.4 Open the GitHub website and create two empty private repositories with the named `name-of-your-project_code` and `name-of-your-project_paper`, with `name-of-your-project` being a short name (probably one or two words) for your research project.
+
+1.5 Open the terminal (Git Bash on Windows) locally in the `code` folder and enter the following commands:
+
 ```bash
-   cd <project-name>
-   git init
-   gh repo create <org>/<project-name> --private --source=. --remote=origin
-   git add .
-   git commit -m "Initial commit from SoDa template"
-   git push -u origin main
-   ```
+git init
+git add .
+git commit -m "initial commit"
+git remote add origin https://github.com/your-github-name/name-of-your-project_code.git
+git push -u origin main
+```
 
-1.4 Create a **new** Git history and remote backing repo 
-   + On GitHub → **Settings › Collaborators** → add co-authors & supervisors | Give everyone access |
+1.7 Repeat step 1.6 for the `paper` directory.
+
+1.8 Configure the two GitHub repositories on the website:
+   + **Settings › Collaborators** → add co-authors & supervisors | Give everyone access |
    + (Optional) Protect `main` branch & enable GitHub Actions | Enforce code review & CI |
 
-
-+ **Tip:** New to Git? Follow the *Hello World* tutorial  <https://guides.github.com/activities/hello-world/>
-
- 
-
-### 2. Adapt the project checklist 📝
+### 2. Adapt the Project Checklist 📝
 
 2.1 Open **`Checklist.md`** → [template](https://github.com/cdueben/soda_replicator/blob/main/Checklist.md).  
 
@@ -41,18 +43,17 @@ This repository provides a **template for reproducible, collaborative applied-ec
 
 ```bash
    git add Checklist.md
-   git commit -m "Customise replication checklist"
-   git push
+   git commit -m "customize replication checklist"
+   git push origin main
 ```
 
-### 3. Understand the folder structure 🏗️
+### 3. Understand the Folder Structure 🏗️
 
 ```bash
 project-root/
 ├── code/        # dataprep, analysis scripts, renv/venv, tests
 |    ├── dataprep/
 |    ├── analysis/
-|    └── renv/
 ├── paper/       # manuscript and slides (LaTeX/Quarto/Markdown), figs, tables
 |    ├── draft/
 |    ├── presentation/
@@ -60,11 +61,22 @@ project-root/
 └── data/        # <-- lives *outside* the Git repo!
 ```    
 
-**Use absolute paths when scripts reference data!**
+**Use relative paths when scripts reference data!**
 
-### 4. Start coding 👩‍💻👨‍💻
+### 4. Read and Delete Example Files
 
-4.1 Activate the virtual environment in code/ (renv::restore() or python -m venv env).
+4.1 The template contains a number of example files to showcase how to work with it. The readmes in the subdirectories list files and folders which should be deleted before you add you own content. If you do not want to delete them manually, open a terminal (Git Bash on Windows) in the template directory and run the following lines:
+
+```bash
+chmod +x delete_examples.sh
+./delete_examples.sh
+```
+
+Then delete the `delete_examples.sh` file.
+
+### 4. Start Coding 👩‍💻👨‍💻
+
+4.1 Activate the virtual environment in code ([`renv`](https://rstudio.github.io/renv/)/ [`venv`](https://docs.python.org/3/library/venv.html)/ [`conda`](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)).
 
 4.2 Write scripts in code/dataprep and code/analysis.
 
@@ -72,26 +84,31 @@ project-root/
 
 ```bash
 git add code/
-git commit -m "Add first data-prep script"
-git push
+git commit -m "add first data-prep script"
+git push origin main
 ```
-4.4 Verify commits and CI status on GitHub.
+4.4 Verify commits and CI status on GitHub ([GitHub guide](https://docs.github.com/en/get-started/quickstart)).
 
-4.5 GitHub guide: https://docs.github.com/en/get-started/quickstart
-
-### 5. Tick off the checklist ✔️
+### 5. Tick Off the Checklist ✔️
 
 After each milestone:
 
-+ Edit Checklist.md
++ Edit `Checklist.md`.
 
-+ Add a tick (✓) and today’s date, e.g. [x] Import raw data ✓ 2025-06-25
++ Add a tick (`✓`) and today’s date, e.g., [`x`] Import raw data `✓` 2025-06-25.
 
 + Request review via a pull request.
 
-### 6. Run the AI code checker 🤖
+### 6. Run the AI Code Checker 🤖
 
 GitHub Actions automatically:
+  + Restore the environment (renv.lock / requirements.txt).
+
+  + Read Checklist.md for outstanding tasks.
+
+  + Lint code for style and reproducibility.
+
+  + Comment on your pull request.
 
 + Restores the environment (renv.lock / requirements.txt).
 + Reads Checklist.md for outstanding tasks.
@@ -100,10 +117,9 @@ GitHub Actions automatically:
 
 ### 7. Create Final Replication Package for Submission
 
-7.1 Follow guidelines from [AEA Data editor](https://github.com/AEADataEditor/replication-template)
+7.1 Follow [guidelines](https://github.com/AEADataEditor/replication-template) from AEA Data editor.
 
 7.2 Have a look at Cynthia Huang's quarto replication [slides](https://cynthiahqy.github.io/monash-quarto-aea/02a-template/) and [template](https://github.com/cynthiahqy/quarto-replication-template)
-
 
 ### 8. Useful Resources
 
@@ -125,7 +141,6 @@ GitHub Actions automatically:
 
 8.4 Python
 + [Monash SoDa Labs - Web Scraping with Python](https://monashdatafluency.github.io/python-web-scraping/)
-
 
 -------------------------
 # Introduction
