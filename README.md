@@ -1,3 +1,96 @@
+# Monash SoDa Replication Template Repository
+
+This repository provides a **template for reproducible, collaborative applied-economics projects**. It containse a basic directory layout (`code/`, `paper/`, _external_ `data/`), starter scripts, virtual-environment stubs, and a replication checklist that feeds an automated AI code-review workflow. Clone or fork it at the outset of every study to lock in best-practice version control, seamless hand-offs between co-authors and supervisors, and effortless generation of journal-ready replication packages.
+
+---
+
+## How to use this repo
+
+### 1. Installation 🚀
+
+| Step | Shell / UI action | Why |
+|------|------------------|-----|
+| **1.1** | Download the template: **Code › Download ZIP** (or `gh repo clone <url>`) | Start with a clean local copy |
+| **1.2** | Unpack & rename the folder to your *project name* | Avoid namespace clashes |
+| **1.3** | ```bash
+   cd <project-name>
+   git init
+   gh repo create <org>/<project-name> --private --source=. --remote=origin
+   git add .
+   git commit -m "Initial commit from SoDa template"
+   git push -u origin main
+   ``` | Create a **new** Git history and remote backing repo |
+| **1.4** | On GitHub → **Settings › Collaborators** → add co-authors & supervisors | Give everyone access |
+| **1.5** | (Optional) Protect `main` branch & enable GitHub Actions | Enforce code review & CI |
+
+> **Tip:** New to Git? Follow the *Hello World* tutorial  
+> <https://guides.github.com/activities/hello-world/>
+
+---
+
+### 2. Adapt the project checklist 📝
+
+1. Open **`Checklist.md`** → [template](https://github.com/cdueben/soda_replicator/blob/main/Checklist.md).  
+2. With your co-authors/supervisor, **rewrite steps** to fit *this* project’s data sources, methods, and outputs.  
+3. Commit changes:  
+   ```bash
+   git add Checklist.md
+   git commit -m "Customise replication checklist"
+   git push
+
+### 3. Understand the folder structure 🏗️
+
+project-root/
+├── code/        # analysis scripts, renv/venv, tests
+├── paper/       # manuscript (LaTeX/Quarto/Markdown), figs, tables
+└── data/        # <-- lives *outside* the Git repo!
+    ├── raw/
+    ├── interim/
+    └── analysis/
+
+**Use absolute paths when scripts reference data!**
+
+### 4. Start coding 👩‍💻👨‍💻
+
+    4.1 Activate the virtual environment in code/ (renv::restore() or python -m venv env).
+
+    4.2 Write scripts in code/dataprep and code/analysis.
+
+    4.3 Test the pipeline, then push:
+
+git add code/
+git commit -m "Add first data-prep script"
+git push
+
+    4.4 Verify commits and CI status on GitHub.
+
+    4.4 GitHub guide: https://docs.github.com/en/get-started/quickstart
+
+### 5. Tick off the checklist ✔️
+
+After each milestone:
+
+    Edit Checklist.md
+
+    Add a tick (✓) and today’s date, e.g.
+
+- [x] Import raw data ✓ 2025-06-25
+
+Request review via a pull request.
+
+### 6. Run the AI code checker 🤖
+
+GitHub Actions automatically:
+
+    Restores the environment (renv.lock / requirements.txt).
+
+    Reads Checklist.md for outstanding tasks.
+
+    Lints code for style and reproducibility.
+
+    Comments results on your pull request.
+
+-------------------------
 # Introduction
 This repository contains a template for a reproducible research project. The focus lies on quantitative social science. Recommendations might not fully apply to other fields.
 
