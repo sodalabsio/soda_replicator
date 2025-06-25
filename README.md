@@ -9,7 +9,9 @@ This repository provides a **template for reproducible, collaborative applied-ec
 ### 1. Installation 🚀
 
 1.1  Download the template: **Code › Download ZIP** (or `gh repo clone <url>`)  
+
 1.2  Unpack & rename the folder to your *project name*  (Avoid namespace clashes )
+
 1.3   
 ```bash
    cd <project-name>
@@ -18,10 +20,12 @@ This repository provides a **template for reproducible, collaborative applied-ec
    git add .
    git commit -m "Initial commit from SoDa template"
    git push -u origin main
-   ``` | Create a **new** Git history and remote backing repo |
-| **1.4** | On GitHub → **Settings › Collaborators** → add co-authors & supervisors | Give everyone access |
-| **1.5** | (Optional) Protect `main` branch & enable GitHub Actions | Enforce code review & CI |
-```
+   ```
+
+1.4 Create a **new** Git history and remote backing repo 
+   + On GitHub → **Settings › Collaborators** → add co-authors & supervisors | Give everyone access |
+   + (Optional) Protect `main` branch & enable GitHub Actions | Enforce code review & CI |
+
 
 + **Tip:** New to Git? Follow the *Hello World* tutorial  <https://guides.github.com/activities/hello-world/>
 
