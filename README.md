@@ -93,13 +93,10 @@ After each milestone:
 
 GitHub Actions automatically:
 
-    + Restores the environment (renv.lock / requirements.txt).
-
-    + Reads Checklist.md for outstanding tasks.
-
-    + Lints code for style and reproducibility.
-
-    + Comments results on your pull request.
++ Restores the environment (renv.lock / requirements.txt).
++ Reads Checklist.md for outstanding tasks.
++ Lints code for style and reproducibility.
++ Comments results on your pull request.
 
 ### 7. Create Final Replication Package for Submission
 
@@ -111,23 +108,23 @@ GitHub Actions automatically:
 ### 8. Useful Resources
 
 8.1 Coding, Data Science, and Reproducability & Replicability Guides
-    + [Grant McDermott - Data science for economists](https://github.com/uo-ec607/lectures)
-    + [LOST - Library of Statistical Techniques](https://lost-stats.github.io/)
-    + [Dan Sullivan - Best Practise for Coding](https://www.danielmsullivan.com/pages/tutorial_workflow_3bestpractice.html)
-    + [AEA Data Editor](https://aeadataeditor.github.io/aea-de-guidance/)
-    + [Koenker & Zeileis - On Reproducible Econometric Research](http://www.econ.uiuc.edu/~roger/research/repro/)
++ [Grant McDermott - Data science for economists](https://github.com/uo-ec607/lectures)
++ [LOST - Library of Statistical Techniques](https://lost-stats.github.io/)
++ [Dan Sullivan - Best Practise for Coding](https://www.danielmsullivan.com/pages/tutorial_workflow_3bestpractice.html)
++ [AEA Data Editor](https://aeadataeditor.github.io/aea-de-guidance/)
++ [Koenker & Zeileis - On Reproducible Econometric Research](http://www.econ.uiuc.edu/~roger/research/repro/)
 
 8.2 Stata
-    + [Poverty Action Lab Stata Guide](https://povertyaction.github.io/guides/cleaning/readme/)
-    + [Asjad Naqvi - The Stata Guide](https://medium.com/the-stata-guide)
-    + [Julian Reif - Stata Coding Guide](https://julianreif.com/guide/)
++ [Poverty Action Lab Stata Guide](https://povertyaction.github.io/guides/cleaning/readme/)
++ [Asjad Naqvi - The Stata Guide](https://medium.com/the-stata-guide)
++ [Julian Reif - Stata Coding Guide](https://julianreif.com/guide/)
 
 8.3 R
-    + [Econometrics with R](https://www.econometrics-with-r.org/)
-    + [Hans H. Sievertsen - Applied Economics with R](https://hhsievertsen.github.io/applied_econ_with_r/)
++ [Econometrics with R](https://www.econometrics-with-r.org/)
++ [Hans H. Sievertsen - Applied Economics with R](https://hhsievertsen.github.io/applied_econ_with_r/)
 
 8.4 Python
-    + [Monash SoDa Labs - Web Scraping with Python](https://monashdatafluency.github.io/python-web-scraping/)
++ [Monash SoDa Labs - Web Scraping with Python](https://monashdatafluency.github.io/python-web-scraping/)
 
 
 -------------------------
