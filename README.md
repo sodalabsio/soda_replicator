@@ -1,6 +1,6 @@
 # Monash SoDa Replication Template Repository
 
-This repository provides a **template for reproducible, collaborative applied-economics projects**. It containse a basic directory layout (`code/`, `paper/`, _external_ `data/`), starter scripts, virtual-environment stubs, and a replication checklist that feeds an automated AI code-review workflow. Clone or fork it at the outset of every study to lock in best-practice version control, seamless hand-offs between co-authors and supervisors, and effortless generation of journal-ready replication packages.
+This repository provides a **template for reproducible, collaborative applied-economics projects**. It contains a basic directory structure(`code/`, `paper/`, _external_ `data/`), starter scripts, virtual-environment stubs, and a replication checklist that feeds an automated AI code-review workflow. Clone or fork it at the outset of every study to lock in best-practice version control, hand-offs between co-authors and supervisors, and generation of replication packages.
 
 ---
 
