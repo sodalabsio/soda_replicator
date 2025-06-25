@@ -8,11 +8,10 @@ This repository provides a **template for reproducible, collaborative applied-ec
 
 ### 1. Installation 🚀
 
-| Step | Shell / UI action | Why |
-|------|------------------|-----|
-| **1.1** | Download the template: **Code › Download ZIP** (or `gh repo clone <url>`) | Start with a clean local copy |
-| **1.2** | Unpack & rename the folder to your *project name* | Avoid namespace clashes |
-| **1.3** | ```bash
+    1.1  Download the template: **Code › Download ZIP** (or `gh repo clone <url>`)  
+    1.2  Unpack & rename the folder to your *project name*  (Avoid namespace clashes )
+|   1.3   
+```bash
    cd <project-name>
    git init
    gh repo create <org>/<project-name> --private --source=. --remote=origin
@@ -22,21 +21,22 @@ This repository provides a **template for reproducible, collaborative applied-ec
    ``` | Create a **new** Git history and remote backing repo |
 | **1.4** | On GitHub → **Settings › Collaborators** → add co-authors & supervisors | Give everyone access |
 | **1.5** | (Optional) Protect `main` branch & enable GitHub Actions | Enforce code review & CI |
+```
 
-> **Tip:** New to Git? Follow the *Hello World* tutorial  
-> <https://guides.github.com/activities/hello-world/>
++ **Tip:** New to Git? Follow the *Hello World* tutorial  <https://guides.github.com/activities/hello-world/>
 
----
+ 
 
 ### 2. Adapt the project checklist 📝
 
-1. Open **`Checklist.md`** → [template](https://github.com/cdueben/soda_replicator/blob/main/Checklist.md).  
-2. With your co-authors/supervisor, **rewrite steps** to fit *this* project’s data sources, methods, and outputs.  
-3. Commit changes:  
-   ```bash
+    2.1 Open **`Checklist.md`** → [template](https://github.com/cdueben/soda_replicator/blob/main/Checklist.md).  
+    2.2 With your co-authors/supervisor, **rewrite steps** to fit *this* project’s data sources, methods, and outputs.  
+    2.3 Commit changes:  
+```bash
    git add Checklist.md
    git commit -m "Customise replication checklist"
    git push
+```
 
 ### 3. Understand the folder structure 🏗️
 
@@ -61,11 +61,11 @@ project-root/
     4.2 Write scripts in code/dataprep and code/analysis.
 
     4.3 Test the pipeline, then push:
-
+```bash
 git add code/
 git commit -m "Add first data-prep script"
 git push
-
+```
     4.4 Verify commits and CI status on GitHub.
 
     4.4 GitHub guide: https://docs.github.com/en/get-started/quickstart
@@ -93,6 +93,11 @@ GitHub Actions automatically:
     Lints code for style and reproducibility.
 
     Comments results on your pull request.
+
+### 7. Create Final Replication Package for Submission
+
+    7.1 Follow guidelines from AEA Data editor  https://github.com/AEADataEditor/replication-template
+    7.2 Use @cynthiahqy's quarto replication template https://github.com/cynthiahqy/quarto-replication-template
 
 -------------------------
 # Introduction
