@@ -50,13 +50,13 @@ This repository provides a **template for reproducible, collaborative applied-ec
 ```bash
 project-root/
 ├── code/        # dataprep, analysis scripts, renv/venv, tests
-    ├── dataprep/
-    ├── analysis/
-    └── renv/
+|    ├── dataprep/
+|    ├── analysis/
+|    └── renv/
 ├── paper/       # manuscript and slides (LaTeX/Quarto/Markdown), figs, tables
-    ├── draft/
-    ├── presentation/
-    └── results/
+|    ├── draft/
+|    ├── presentation/
+|    └── results/
 └── data/        # <-- lives *outside* the Git repo!
 ```    
 
