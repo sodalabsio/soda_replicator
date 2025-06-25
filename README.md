@@ -8,9 +8,9 @@ This repository provides a **template for reproducible, collaborative applied-ec
 
 ### 1. Installation 🚀
 
-    1.1  Download the template: **Code › Download ZIP** (or `gh repo clone <url>`)  
-    1.2  Unpack & rename the folder to your *project name*  (Avoid namespace clashes )
-|   1.3   
+1.1  Download the template: **Code › Download ZIP** (or `gh repo clone <url>`)  
+1.2  Unpack & rename the folder to your *project name*  (Avoid namespace clashes )
+1.3   
 ```bash
    cd <project-name>
    git init
