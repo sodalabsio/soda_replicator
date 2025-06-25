@@ -33,9 +33,12 @@ This repository provides a **template for reproducible, collaborative applied-ec
 
 ### 2. Adapt the project checklist 📝
 
-    2.1 Open **`Checklist.md`** → [template](https://github.com/cdueben/soda_replicator/blob/main/Checklist.md).  
-    2.2 With your co-authors/supervisor, **rewrite steps** to fit *this* project’s data sources, methods, and outputs.  
-    2.3 Commit changes:  
+2.1 Open **`Checklist.md`** → [template](https://github.com/cdueben/soda_replicator/blob/main/Checklist.md).  
+
+2.2 With your co-authors/supervisor, **rewrite steps** to fit *this* project’s data sources, methods, and outputs.  
+
+2.3 Commit changes:  
+
 ```bash
    git add Checklist.md
    git commit -m "Customise replication checklist"
@@ -44,6 +47,7 @@ This repository provides a **template for reproducible, collaborative applied-ec
 
 ### 3. Understand the folder structure 🏗️
 
+```bash
 project-root/
 ├── code/        # dataprep, analysis scripts, renv/venv, tests
     ├── dataprep/
@@ -54,54 +58,54 @@ project-root/
     ├── presentation/
     └── results/
 └── data/        # <-- lives *outside* the Git repo!
-    
+```    
 
 **Use absolute paths when scripts reference data!**
 
 ### 4. Start coding 👩‍💻👨‍💻
 
-    4.1 Activate the virtual environment in code/ (renv::restore() or python -m venv env).
+4.1 Activate the virtual environment in code/ (renv::restore() or python -m venv env).
 
-    4.2 Write scripts in code/dataprep and code/analysis.
+4.2 Write scripts in code/dataprep and code/analysis.
 
-    4.3 Test the pipeline, then push:
+4.3 Test the pipeline, then push:
+
 ```bash
 git add code/
 git commit -m "Add first data-prep script"
 git push
 ```
-    4.4 Verify commits and CI status on GitHub.
+4.4 Verify commits and CI status on GitHub.
 
-    4.4 GitHub guide: https://docs.github.com/en/get-started/quickstart
+4.5 GitHub guide: https://docs.github.com/en/get-started/quickstart
 
 ### 5. Tick off the checklist ✔️
 
 After each milestone:
 
-    Edit Checklist.md
++ Edit Checklist.md
 
-    Add a tick (✓) and today’s date, e.g.
++ Add a tick (✓) and today’s date, e.g. [x] Import raw data ✓ 2025-06-25
 
-- [x] Import raw data ✓ 2025-06-25
-
-Request review via a pull request.
++ Request review via a pull request.
 
 ### 6. Run the AI code checker 🤖
 
 GitHub Actions automatically:
 
-    Restores the environment (renv.lock / requirements.txt).
+    + Restores the environment (renv.lock / requirements.txt).
 
-    Reads Checklist.md for outstanding tasks.
+    + Reads Checklist.md for outstanding tasks.
 
-    Lints code for style and reproducibility.
+    + Lints code for style and reproducibility.
 
-    Comments results on your pull request.
+    + Comments results on your pull request.
 
 ### 7. Create Final Replication Package for Submission
 
-    7.1 Follow guidelines from AEA Data editor  https://github.com/AEADataEditor/replication-template
-    7.2 Use @cynthiahqy's quarto replication template https://github.com/cynthiahqy/quarto-replication-template
+7.1 Follow guidelines from AEA Data editor  https://github.com/AEADataEditor/replication-template
+
+7.2 Use @cynthiahqy's quarto replication template https://github.com/cynthiahqy/quarto-replication-template
 
 -------------------------
 # Introduction
