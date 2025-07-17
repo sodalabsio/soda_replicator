@@ -1,6 +1,6 @@
-# Code Repository
+# Paper Repository
 
-`.Rprofile`, `code.Rproj`, `renv.lock`, the `renv` directory, and this readme serve as illustrative examples only. Delete them at the beginning of your project.
+This folder contains the manuscript, presentations, and output from analysis.
 
 ## Claude Assistant Setup
 
