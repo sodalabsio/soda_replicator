@@ -223,3 +223,45 @@ You have the information on input data in the documentation in the `data/raw` di
 Some journals' data editors are not overly technical. To avoid various rounds of replication package resubmission, you should stick to simple wording in your instructions.
 
 Though requirements are not identical across journals, they tend to be similar. There are various guides on how to craft replication packages more broadly. Cynthia has written fantastic [slides](https://cynthiahqy.github.io/monash-quarto-aea/02a-template/) on replication packages in Quarto. And the [Data and Code Availability Standard](https://datacodestandard.org/) lists rules that a number of journals agree on.
+
+# Claude Assistant GitHub Workflow Setup
+
+This template includes a GitHub workflow for Claude Assistant, an AI-powered code review and assistance tool. Follow these steps to activate it:
+
+## Prerequisites
+- GitHub repository with appropriate permissions
+- Anthropic API key (get from https://console.anthropic.com/)
+
+## Setup Steps
+
+### 1. Add Anthropic API Key to Repository Secrets
+1. Go to your repository on GitHub
+2. Navigate to Settings → Secrets and variables → Actions
+3. Click "New repository secret"
+4. Name: `ANTHROPIC_API_KEY`
+5. Value: Your Anthropic API key
+6. Click "Add secret"
+
+### 2. Verify Workflow File
+The workflow file is already included at `.github/workflows/claude.yml`. It will automatically:
+- Trigger on issue comments, pull request comments, and reviews
+- Respond to issues being opened, assigned, or labeled
+- Use GitHub's built-in GITHUB_TOKEN for repository access
+
+### 3. How It Works
+Claude will automatically respond to:
+- New issue comments
+- New pull request review comments
+- Issues being opened, assigned, or labeled
+- Pull request reviews being submitted
+
+### 4. Testing
+To test the workflow:
+1. Create a new issue in your repository
+2. Comment on the issue mentioning Claude or asking a question
+3. Claude should respond automatically within a few minutes
+
+## Notes
+- The action uses the @beta tag, which may be subject to changes
+- Ensure your API key has sufficient usage limits
+- Monitor GitHub Actions usage to avoid unexpected costs
