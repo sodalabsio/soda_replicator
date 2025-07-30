@@ -86,8 +86,8 @@ Random seed is set at line ___ of program ___
 
 ### Memory and Runtime
 
-Approximate	time	needed	to	reproduce	the	analyses on	a	standard	2023 machine: 2	hours.
-The	code	was	last	run	on	a	MacBook	Pro M3 (2023)	with	MacOS	version	14.4.1.
+Approximate	time needed to reproduce the analyses on a standard 2023 machine: 2 hours.
+The	code was last run on a MacBook Pro M3 (2023) with MacOS version	14.4.1.
 
 ## Replication Guidance
 
