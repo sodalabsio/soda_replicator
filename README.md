@@ -165,6 +165,10 @@ If there are multiple input data sets, each of them should have its separate dir
 
 Similarly, different sets of analysis data can be organized into multiple folders in `data/analysis`. They do, of course, not require extra documentation on where they came from or on which day they were created. The information on how to create the files from the raw data belongs into the `code` directory. And that code should produce the analysis data irrespective of the execution date. It is a good habit to document the analysis data files in that code because (i) this checks the documentation into version control and (ii) it keeps the explanations close to the logic creating the data.
 
+Because many researchers share downloaded papers that are relevant to the project with their coauthors in cloud folders, `data` also has a `literature` subdirectory. This is simply for convenience. Downloaded article PDFs are not part of the final replication package submitted to journals. `data\literature` only exists for paper sharing among coauthors while the project is evolving. It is optional and can be omitted.
+
+The reason to place `literature` in `data`, and not in `paper`, is to exclude it from version control. PDFs in the hundreds of pages would simply clutter the git history meant to track files that you are editing yourself and that feed into a subsequent replication package.
+
 ### Code
 The quantitative analysis code, covering all steps from the raw data to the results shown in the paper, belong into the `code` directory. This is your R, Python, Stata, Julia, C++ code. It should be managed with Git.
 
