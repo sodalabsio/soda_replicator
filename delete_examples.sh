@@ -15,7 +15,7 @@ fi
 rm -r code/renv
 rm code/analysis/*
 rm -r code/dataprep/*
-find code -maxdepth 1 -type f -delete 2>/dev/null || true
+find code -maxdepth 1 -type f ! -name ".gitignore" ! -name "checklist.md" -delete 2>/dev/null || true
 
 # Delete files in data directory
 rm data/analysis/*
