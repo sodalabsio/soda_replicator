@@ -6,13 +6,13 @@ on:
   pull_request_review_comment:
     types: [created]
   issues:
-    types: [opened, assigned, labeled]
+    types: [opened, assigned]
   pull_request_review:
     types: [submitted]
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
+  pull-requests: read
   issues: write
   actions: read
 
