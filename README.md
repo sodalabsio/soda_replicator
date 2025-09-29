@@ -1,6 +1,6 @@
 # Monash SoDa Replication Template Repository
 
-This repository provides a **template for reproducible, collaborative applied-economics projects**. It contains a basic directory structure(`code/`, `paper/`, _external_ `data/`), starter scripts, virtual-environment stubs, and a replication checklist that feeds an automated AI code-review workflow. Clone or fork it at the outset of every study to lock in best-practice version control, hand-offs between co-authors and supervisors, and generation of replication packages.
+This repository provides a **template for reproducible, collaborative applied-economics projects**. It contains a basic directory structure(`code/`, `paper/`, `data/`), starter scripts, virtual-environment stubs, and a replication checklist that feeds an automated AI code-review workflow. Download it at the outset of every study to lock in best-practice version control, hand-offs between co-authors and supervisors, and generation of replication packages.
 
 ---
 
@@ -30,8 +30,8 @@ git push -u origin main
 1.7 Repeat step 1.6 for the `paper` directory.
 
 1.8 Configure the two GitHub repositories on the website:
-   + **Settings › Collaborators** → add co-authors & supervisors | Give everyone access |
-   + (Optional) Protect `main` branch & enable GitHub Actions | Enforce code review & CI |
+   + **Settings › Collaborators** → add co-authors & supervisors
+   + (Optional) Protect `main` branch (enforce code review) & enable GitHub Actions
 
 ### 2. Create the Project Checklist 📝
 
@@ -76,9 +76,9 @@ Then delete the `delete_examples.sh` file.
 
 ### 4. Start Coding 👩‍💻👨‍💻
 
-4.1 Activate the virtual environment in code ([`renv`](https://rstudio.github.io/renv/)/ [`venv`](https://docs.python.org/3/library/venv.html)/ [`conda`](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)).
+4.1 Activate the virtual environment in `code` ([`renv`](https://rstudio.github.io/renv/)/ [`venv`](https://docs.python.org/3/library/venv.html)/ [`conda`](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)).
 
-4.2 Write scripts in code/dataprep and code/analysis.
+4.2 Write scripts in `code/dataprep` and `code/analysis`.
 
 4.3 Test the pipeline, then push:
 
@@ -94,27 +94,22 @@ git push origin main
 After each milestone:
 
 + Edit `checklist.md`.
-
 + Add a tick (`✓`) and today’s date, e.g., [`x`] Import raw data `✓` 2025-06-25.
-
 + Request review via a pull request.
 
 ### 6. Run the AI Code Checker 🤖
 
 GitHub Actions automatically:
   + Restore the environment (renv.lock / requirements.txt).
-
   + Read checklist.md for outstanding tasks.
-
   + Lint code for style and reproducibility.
-
   + Comment on your pull request.
 
 ### 7. Create Final Replication Package for Submission
 
 7.1 Follow [guidelines](https://github.com/AEADataEditor/replication-template) from AEA Data editor.
 
-7.2 Have a look at Cynthia Huang's quarto replication [slides](https://cynthiahqy.github.io/monash-quarto-aea/02a-template/) and [template](https://github.com/cynthiahqy/quarto-replication-template)
+7.2 Have a look at Cynthia Huang's quarto replication [slides](https://cynthiahqy.github.io/monash-quarto-aea/02a-template/) and [template](https://github.com/cynthiahqy/quarto-replication-template).
 
 ### 8. Useful Resources
 
@@ -122,6 +117,7 @@ GitHub Actions automatically:
 + [Grant McDermott - Data science for economists](https://github.com/uo-ec607/lectures)
 + [LOST - Library of Statistical Techniques](https://lost-stats.github.io/)
 + [Dan Sullivan - Best Practise for Coding](https://www.danielmsullivan.com/pages/tutorial_workflow_3bestpractice.html)
++ [Model to Meaning](https://marginaleffects.com/)
 + [AEA Data Editor](https://aeadataeditor.github.io/aea-de-guidance/)
 + [Koenker & Zeileis - On Reproducible Econometric Research](http://www.econ.uiuc.edu/~roger/research/repro/)
 
@@ -132,6 +128,8 @@ GitHub Actions automatically:
 
 8.3 R
 + [Fixest Walkthrough](https://cran.r-project.org/web/packages/fixest/vignettes/fixest_walkthrough.html)
++ [R for Data Science](https://r4ds.hadley.nz/)
++ [Introduction to data.table](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html)
 + [Hans H. Sievertsen - Applied Economics with R](https://hhsievertsen.github.io/applied_econ_with_r/)
 
 8.4 Python
