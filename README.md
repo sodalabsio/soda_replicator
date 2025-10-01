@@ -1,6 +1,6 @@
 # Monash SoDa Replication Template Repository
 
-This repository provides a **template for reproducible, collaborative applied-economics projects**. It contains a basic directory structure(`code/`, `paper/`, `data/`), starter scripts, virtual-environment stubs, and a replication checklist that feeds an automated AI code-review workflow. Download it at the outset of every study to lock in best-practice version control, hand-offs between co-authors and supervisors, and generation of replication packages.
+This repository provides a **template for reproducible, collaborative applied-economics projects**. It contains a basic directory structure(`code/`, `paper/`, `data/`), starter scripts, virtual-environment stubs, and a replication checklist that feeds an automated AI code-review workflow. The [main](https://github.com/cdueben/soda_replicator/tree/main) branch contains example files to illustrate template use. Download the example-free [clean](https://github.com/cdueben/soda_replicator/tree/clean) branch at the outset of every study to lock in best-practice version control, hand-offs between co-authors and supervisors, and generation of replication packages.
 
 ---
 
@@ -8,7 +8,7 @@ This repository provides a **template for reproducible, collaborative applied-ec
 
 ### 1. Installation 🚀
 
-1.1  Download the template: **Code › Download ZIP**.
+1.1  Download the [clean](https://github.com/cdueben/soda_replicator/tree/clean) template: **[Code › Download ZIP](https://github.com/cdueben/soda_replicator/archive/refs/heads/clean.zip)**.
 
 1.2  Unpack & rename the folder to your *project name* (Avoid namespace clashes).
 
@@ -66,17 +66,6 @@ project-root/
 ```
 
 **Use relative paths when scripts reference data!** I.e. `../data/analysis/baseline.csv` instead of `/home/your_username/cloud_folder/your_project/data/analysis/baseline.csv`.
-
-### 4. Read and Delete Example Files
-
-4.1 The template contains a number of example files to showcase how to work with it. The readmes in the subdirectories list files and folders which should be deleted before you add you own content. If you do not want to delete them manually, open a terminal (Git Bash on Windows) in the template directory and run the following lines:
-
-```bash
-chmod +x delete_examples.sh
-./delete_examples.sh
-```
-
-Then delete the `delete_examples.sh` file.
 
 ### 4. Start Coding 👩‍💻👨‍💻
 
