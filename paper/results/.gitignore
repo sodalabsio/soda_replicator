@@ -5,3 +5,5 @@
 !*.md
 !figures/
 !tables/
+!*.png
+!*.jpg
