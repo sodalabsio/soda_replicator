@@ -1,3 +1,1 @@
-The contents of this folder serve as illustrative examples only. Remove them, incl. this readme, at the beginning of your project.
-
-The scripts are, of course, overly short. While it a good style to keep scripts at manageable lengths, you do not need to keep them this brief.
+Code in this folder prepares the data for analysis. It converts the data in `data/raw` into the data in `data/interim` and `data/analysis`.

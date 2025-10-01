@@ -1,1 +1,1 @@
-The Python script and R script in this folder are just illustrative examples. Remove them together with this readme at the beginning of your project.
+Analysis code, e.g. on summary statistics or regression analysis, belongs into this directory. Create sub-directories, if needed.

@@ -1,1 +1,1 @@
-The population and weather directories in this template serve as illustrative examples only. Delete them together with this readme at the start of the project.
+This directory contains the input data sets in their original format, as you downloaded them from the publisher. Place each data set together with its documentation, download time, and URL in a subfolder.

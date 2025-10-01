@@ -1,6 +1,6 @@
 # Paper Repository
 
-This folder contains the manuscript, presentations, and output from analysis.
+This directory contains the manuscript, presentations, and output from analysis. Initialize a Git repository at the top level of this `paper` folder. Share it with coauthors through GitHub, **not** via regular cloud storage services.
 
 ## Claude Assistant Setup
 

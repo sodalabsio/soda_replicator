@@ -1,1 +1,1 @@
-The csv files are only examples. Remove them together with this readme at the beginning of your project.
+This directory contains data sets at an interim stage. They are not raw because you already modified them, but they are also not analysis-ready. This directory is primarily relevant for large projects where it takes multiple steps to convert the raw data into the analysis data.

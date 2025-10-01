@@ -1,6 +1,6 @@
 # Code Repository
 
-`.Rprofile`, `code.Rproj`, `renv.lock`, the `renv` directory, and this readme serve as illustrative examples only. Delete them at the beginning of your project.
+This directory contains the empirical analysis code, i.e. your R, Python, Julia, etc. scripts. Initialize a Git repository at the top level of this `code` folder. Share it with coauthors through GitHub, **not** via regular cloud storage services.
 
 ## Claude Assistant Setup
 

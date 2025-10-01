@@ -1,0 +1,1 @@
+This directory contains all data sets, from the raw inputs to the regression-ready files. **Do not** initialize a Git repository in this folder. Share it with coauthors through regular cloud storage services.
