@@ -54,12 +54,16 @@ project-root/
 ├── code/        # dataprep, analysis scripts, renv/venv, tests
 |    ├── dataprep/
 |    ├── analysis/
-├── paper/       # manuscript and slides (LaTeX/Quarto/Markdown), figs, tables
+├── paper/       # manuscript and slides (LaTeX/Quarto/Markdown), figures, tables
 |    ├── draft/
 |    ├── presentation/
 |    └── results/
 └── data/        # <-- lives *outside* the Git repo!
-```    
+     ├── raw
+     ├── interim/
+     ├── analysis/
+     └── literature/
+```
 
 **Use relative paths when scripts reference data!** I.e. `../data/analysis/baseline.csv` instead of `/home/your_username/cloud_folder/your_project/data/analysis/baseline.csv`.
 
@@ -94,8 +98,8 @@ git push origin main
 After each milestone:
 
 + Edit `checklist.md`.
-+ Add a tick (`✓`) and today’s date, e.g., [`x`] Import raw data `✓` 2025-06-25.
-+ Request review via a pull request.
++ Select elements with `[x]`.
++ Request review via an issue or a pull request.
 
 ### 6. Run the AI Code Checker 🤖
 
