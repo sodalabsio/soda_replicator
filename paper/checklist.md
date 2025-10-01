@@ -1,4 +1,5 @@
 # Paper Review Checklist
+[Note: This is a sample template. Review and adapt to the specific context of your project.]
 
 Claude, only check elements selected with `[x]`.
 
@@ -6,7 +7,6 @@ Claude, only check elements selected with `[x]`.
 - [x] Abstract clearly states research question, method, key findings, and contribution
 - [x] Introduction motivates the research question and previews main results
 - [ ] Literature review positions paper within existing research
-- [ ] Methodology section is complete and replicable
 - [ ] Results section matches tables/figures cited in text
 - [ ] Discussion interprets findings and addresses limitations
 - [ ] Conclusion summarizes contribution without introducing new material
@@ -14,7 +14,7 @@ Claude, only check elements selected with `[x]`.
 ## Data & Methods
 - [ ] Sample size, time period, and data sources clearly stated
 - [ ] Variable definitions provided
-- [ ] Estimation strategy justified (e.g., OLS, IV, DID, RDD)
+- [ ] Estimation strategy explained and justified (e.g., OLS, IV, DID, RDD)
 - [ ] Identification assumptions explicitly stated
 - [ ] Robustness checks discussed or referenced
 
@@ -22,9 +22,10 @@ Claude, only check elements selected with `[x]`.
 - [ ] All tables/figures have descriptive titles and captions
 - [ ] Column headers and row labels are clear
 - [ ] Standard errors in parentheses (specify clustering if applicable)
-- [ ] Significance stars defined in notes (e.g., * p<0.10, ** p<0.05, *** p<0.01)
+- [ ] Significance stars defined in notes (e.g., * p<0.10, ** p<0.05, *** p<0.01) if applicable
 - [ ] Source notes provided where applicable
 - [ ] Tables formatted consistently across document
+- [ ] All tables and figures are referenced in the text
 
 ## Statistical Reporting
 - [ ] Coefficients reported with standard errors or confidence intervals
@@ -54,7 +55,7 @@ Claude, only check elements selected with `[x]`.
 - [ ] Paragraph structure logical (topic sentences clear)
 
 ## LaTeX-Specific
-- [ ] No compilation errors or warnings
+- [ ] Document compiles
 - [ ] Cross-references working
 - [ ] Page breaks appropriate (tables/figures not orphaned)
 - [ ] Line numbers included if required for submission
