@@ -143,7 +143,7 @@ Whereas a journal replication package is the final project state bundled into a 
 While most recommendations here are agnostic of your choice of data science and typesetting language, this readme adds some language-specific comments in a section below.
 
 ## Directory Structure
-Before we discuss the directory structure, it is important to stress that you are not meant to use the template as a single Git repository. We host the three separate folders (`data`, `code`, and `paper` jointly in one place so that you can download them in one go and have a good overview of the entire structure. In your project, you administer them as distinct repositories (`code` and `paper`) and one non-Git folder (`data`) located in one parent directory.
+Before we discuss the directory structure, it is important to stress that you are not meant to use the template as a single Git repository. We host the three separate folders (`data`, `code`, and `paper`) jointly in one place so that you can download them in one go and have a good overview of the entire structure. In your project, you administer them as distinct repositories (`code` and `paper`) and one non-Git folder (`data`) located in one parent directory.
 
 To summarize the contents: `data` holds the data, `code` holds the quantitative analysis code, and `paper` holds the markup code.
 
