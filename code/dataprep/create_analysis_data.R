@@ -7,7 +7,7 @@ rm(list = ls())
 require("data.table")
 
 # Load data
-input_data <- list.files("../data/intermediate", "[.]csv$", full.names = T) |>
+input_data <- list.files("../data/interim", "[.]csv$", full.names = T) |>
   lapply(fread)
 
 # Join based on city name

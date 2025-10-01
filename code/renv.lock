@@ -1,17 +1,64 @@
 {
   "R": {
-    "Version": "4.5.0",
+    "Version": "4.5.1",
     "Repositories": [
       {
         "Name": "CRAN",
-        "URL": "https://packagemanager.posit.co/cran/latest"
+        "URL": "https://cran.rstudio.com"
       }
     ]
   },
   "Packages": {
+    "Formula": {
+      "Package": "Formula",
+      "Version": "1.2-5",
+      "Source": "Repository",
+      "Date": "2023-02-23",
+      "Title": "Extended Model Formulas",
+      "Description": "Infrastructure for extended formulas with multiple parts on the right-hand side and/or multiple responses on the left-hand side (see <doi:10.18637/jss.v034.i01>).",
+      "Authors@R": "c(person(given = \"Achim\", family = \"Zeileis\", role = c(\"aut\", \"cre\"), email = \"Achim.Zeileis@R-project.org\", comment = c(ORCID = \"0000-0003-0918-3766\")), person(given = \"Yves\", family = \"Croissant\", role = \"aut\", email = \"Yves.Croissant@univ-reunion.fr\"))",
+      "Depends": [
+        "R (>= 2.0.0)",
+        "stats"
+      ],
+      "License": "GPL-2 | GPL-3",
+      "NeedsCompilation": "no",
+      "Author": "Achim Zeileis [aut, cre] (<https://orcid.org/0000-0003-0918-3766>), Yves Croissant [aut]",
+      "Maintainer": "Achim Zeileis <Achim.Zeileis@R-project.org>",
+      "Repository": "CRAN"
+    },
+    "Rcpp": {
+      "Package": "Rcpp",
+      "Version": "1.1.0",
+      "Source": "Repository",
+      "Title": "Seamless R and C++ Integration",
+      "Date": "2025-07-01",
+      "Authors@R": "c(person(\"Dirk\", \"Eddelbuettel\", role = c(\"aut\", \"cre\"), email = \"edd@debian.org\", comment = c(ORCID = \"0000-0001-6419-907X\")), person(\"Romain\", \"Francois\", role = \"aut\", comment = c(ORCID = \"0000-0002-2444-4226\")), person(\"JJ\", \"Allaire\", role = \"aut\", comment = c(ORCID = \"0000-0003-0174-9868\")), person(\"Kevin\", \"Ushey\", role = \"aut\", comment = c(ORCID = \"0000-0003-2880-7407\")), person(\"Qiang\", \"Kou\", role = \"aut\", comment = c(ORCID = \"0000-0001-6786-5453\")), person(\"Nathan\", \"Russell\", role = \"aut\"), person(\"Iñaki\", \"Ucar\", role = \"aut\", comment = c(ORCID = \"0000-0001-6403-5550\")), person(\"Doug\", \"Bates\", role = \"aut\", comment = c(ORCID = \"0000-0001-8316-9503\")), person(\"John\", \"Chambers\", role = \"aut\"))",
+      "Description": "The 'Rcpp' package provides R functions as well as C++ classes which offer a seamless integration of R and C++. Many R data types and objects can be mapped back and forth to C++ equivalents which facilitates both writing of new code as well as easier integration of third-party libraries. Documentation about 'Rcpp' is provided by several vignettes included in this package, via the 'Rcpp Gallery' site at <https://gallery.rcpp.org>, the paper by Eddelbuettel and Francois (2011, <doi:10.18637/jss.v040.i08>), the book by Eddelbuettel (2013, <doi:10.1007/978-1-4614-6868-4>) and the paper by Eddelbuettel and Balamuta (2018, <doi:10.1080/00031305.2017.1375990>); see 'citation(\"Rcpp\")' for details.",
+      "Imports": [
+        "methods",
+        "utils"
+      ],
+      "Suggests": [
+        "tinytest",
+        "inline",
+        "rbenchmark",
+        "pkgKitten (>= 0.1.2)"
+      ],
+      "URL": "https://www.rcpp.org, https://dirk.eddelbuettel.com/code/rcpp.html, https://github.com/RcppCore/Rcpp",
+      "License": "GPL (>= 2)",
+      "BugReports": "https://github.com/RcppCore/Rcpp/issues",
+      "MailingList": "rcpp-devel@lists.r-forge.r-project.org",
+      "RoxygenNote": "6.1.1",
+      "Encoding": "UTF-8",
+      "NeedsCompilation": "yes",
+      "Author": "Dirk Eddelbuettel [aut, cre] (ORCID: <https://orcid.org/0000-0001-6419-907X>), Romain Francois [aut] (ORCID: <https://orcid.org/0000-0002-2444-4226>), JJ Allaire [aut] (ORCID: <https://orcid.org/0000-0003-0174-9868>), Kevin Ushey [aut] (ORCID: <https://orcid.org/0000-0003-2880-7407>), Qiang Kou [aut] (ORCID: <https://orcid.org/0000-0001-6786-5453>), Nathan Russell [aut], Iñaki Ucar [aut] (ORCID: <https://orcid.org/0000-0001-6403-5550>), Doug Bates [aut] (ORCID: <https://orcid.org/0000-0001-8316-9503>), John Chambers [aut]",
+      "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
+      "Repository": "CRAN"
+    },
     "data.table": {
       "Package": "data.table",
-      "Version": "1.17.4",
+      "Version": "1.17.8",
       "Source": "Repository",
       "Title": "Extension of `data.frame`",
       "Depends": [
@@ -71,9 +118,186 @@
       "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
       "Repository": "CRAN"
     },
+    "dreamerr": {
+      "Package": "dreamerr",
+      "Version": "1.5.0",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Error Handling Made Easy",
+      "Authors@R": "person(\"Laurent\", \"Berge\", email = \"laurent.berge@u-bordeaux.fr\", role = c(\"aut\", \"cre\"))",
+      "Imports": [
+        "Formula",
+        "utils",
+        "stringmagic(>= 1.2.0)"
+      ],
+      "Suggests": [
+        "knitr",
+        "rmarkdown",
+        "stats",
+        "graphics"
+      ],
+      "Description": "Set of tools to facilitate package development and make R a more user-friendly place. Mostly for developers (or anyone who writes/shares functions). Provides a simple, powerful and flexible way to check the arguments passed to functions.  The developer can easily describe the type of argument needed. If the user provides a wrong argument, then an informative error message is prompted with the requested type and the problem clearly stated--saving the user a lot of time in debugging.",
+      "License": "GPL-3",
+      "Encoding": "UTF-8",
+      "VignetteBuilder": "knitr",
+      "BugReports": "https://github.com/lrberge/dreamerr/issues",
+      "RoxygenNote": "7.3.2",
+      "NeedsCompilation": "no",
+      "Author": "Laurent Berge [aut, cre]",
+      "Maintainer": "Laurent Berge <laurent.berge@u-bordeaux.fr>",
+      "Repository": "CRAN"
+    },
+    "fixest": {
+      "Package": "fixest",
+      "Version": "0.13.2",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Fast Fixed-Effects Estimations",
+      "Authors@R": "c(person(given = \"Laurent\", family = \"Berge\", role = c(\"aut\", \"cre\"), email = \"laurent.berge@u-bordeaux.fr\"), person(given = \"Sebastian\", family = \"Krantz\", role = \"ctb\"), person(given = \"Grant\", family = \"McDermott\", role = \"ctb\", email = \"grantmcd@uoregon.edu\", comment = c(ORCID = \"0000-0001-7883-8573\")), person(given = \"Russell\", family = \"Lenth\", role = \"ctb\", email = \"russell-lenth@uiowa.edu\"), person(given = \"Kyle\", family = \"Butts\", role = \"ctb\", email = \"buttskyle96@gmail.com\"))",
+      "Imports": [
+        "stats",
+        "graphics",
+        "grDevices",
+        "tools",
+        "utils",
+        "methods",
+        "numDeriv",
+        "nlme",
+        "sandwich",
+        "Rcpp(>= 1.0.5)",
+        "dreamerr(>= 1.4.0)",
+        "stringmagic(>= 1.2.0)"
+      ],
+      "Suggests": [
+        "knitr",
+        "rmarkdown",
+        "data.table",
+        "plm",
+        "MASS",
+        "pander",
+        "ggplot2",
+        "lfe",
+        "tinytex",
+        "pdftools",
+        "emmeans",
+        "estimability",
+        "AER",
+        "Matrix"
+      ],
+      "LinkingTo": [
+        "Rcpp"
+      ],
+      "Depends": [
+        "R(>= 3.5.0)"
+      ],
+      "Description": "Fast and user-friendly estimation of econometric models with multiple fixed-effects. Includes ordinary least squares (OLS), generalized linear models (GLM) and the negative binomial. The core of the package is based on optimized parallel C++ code, scaling especially well for large data sets. The method to obtain the fixed-effects coefficients is based on Berge (2018) <https://github.com/lrberge/fixest/blob/master/_DOCS/FENmlm_paper.pdf>. Further provides tools to export and view the results of several estimations with intuitive design to cluster the standard-errors.",
+      "License": "GPL-3",
+      "BugReports": "https://github.com/lrberge/fixest/issues",
+      "URL": "https://lrberge.github.io/fixest/, https://github.com/lrberge/fixest",
+      "VignetteBuilder": "knitr",
+      "LazyData": "true",
+      "RoxygenNote": "7.3.2.9000",
+      "Encoding": "UTF-8",
+      "NeedsCompilation": "yes",
+      "Author": "Laurent Berge [aut, cre], Sebastian Krantz [ctb], Grant McDermott [ctb] (ORCID: <https://orcid.org/0000-0001-7883-8573>), Russell Lenth [ctb], Kyle Butts [ctb]",
+      "Maintainer": "Laurent Berge <laurent.berge@u-bordeaux.fr>",
+      "Repository": "CRAN"
+    },
+    "lattice": {
+      "Package": "lattice",
+      "Version": "0.22-7",
+      "Source": "Repository",
+      "Date": "2025-03-31",
+      "Priority": "recommended",
+      "Title": "Trellis Graphics for R",
+      "Authors@R": "c(person(\"Deepayan\", \"Sarkar\", role = c(\"aut\", \"cre\"), email = \"deepayan.sarkar@r-project.org\", comment = c(ORCID = \"0000-0003-4107-1553\")), person(\"Felix\", \"Andrews\", role = \"ctb\"), person(\"Kevin\", \"Wright\", role = \"ctb\", comment = \"documentation\"), person(\"Neil\", \"Klepeis\", role = \"ctb\"), person(\"Johan\", \"Larsson\", role = \"ctb\", comment = \"miscellaneous improvements\"), person(\"Zhijian (Jason)\", \"Wen\", role = \"cph\", comment = \"filled contour code\"), person(\"Paul\", \"Murrell\", role = \"ctb\", email = \"paul@stat.auckland.ac.nz\"), person(\"Stefan\", \"Eng\", role = \"ctb\", comment = \"violin plot improvements\"), person(\"Achim\", \"Zeileis\", role = \"ctb\", comment = \"modern colors\"), person(\"Alexandre\", \"Courtiol\", role = \"ctb\", comment = \"generics for larrows, lpolygon, lrect and lsegments\") )",
+      "Description": "A powerful and elegant high-level data visualization system inspired by Trellis graphics, with an emphasis on multivariate data. Lattice is sufficient for typical graphics needs, and is also flexible enough to handle most nonstandard requirements. See ?Lattice for an introduction.",
+      "Depends": [
+        "R (>= 4.0.0)"
+      ],
+      "Suggests": [
+        "KernSmooth",
+        "MASS",
+        "latticeExtra",
+        "colorspace"
+      ],
+      "Imports": [
+        "grid",
+        "grDevices",
+        "graphics",
+        "stats",
+        "utils"
+      ],
+      "Enhances": [
+        "chron",
+        "zoo"
+      ],
+      "LazyLoad": "yes",
+      "LazyData": "yes",
+      "License": "GPL (>= 2)",
+      "URL": "https://lattice.r-forge.r-project.org/",
+      "BugReports": "https://github.com/deepayan/lattice/issues",
+      "NeedsCompilation": "yes",
+      "Author": "Deepayan Sarkar [aut, cre] (<https://orcid.org/0000-0003-4107-1553>), Felix Andrews [ctb], Kevin Wright [ctb] (documentation), Neil Klepeis [ctb], Johan Larsson [ctb] (miscellaneous improvements), Zhijian (Jason) Wen [cph] (filled contour code), Paul Murrell [ctb], Stefan Eng [ctb] (violin plot improvements), Achim Zeileis [ctb] (modern colors), Alexandre Courtiol [ctb] (generics for larrows, lpolygon, lrect and lsegments)",
+      "Maintainer": "Deepayan Sarkar <deepayan.sarkar@r-project.org>",
+      "Repository": "CRAN"
+    },
+    "nlme": {
+      "Package": "nlme",
+      "Version": "3.1-168",
+      "Source": "Repository",
+      "Date": "2025-03-31",
+      "Priority": "recommended",
+      "Title": "Linear and Nonlinear Mixed Effects Models",
+      "Authors@R": "c(person(\"José\", \"Pinheiro\", role = \"aut\", comment = \"S version\"), person(\"Douglas\", \"Bates\", role = \"aut\", comment = \"up to 2007\"), person(\"Saikat\", \"DebRoy\", role = \"ctb\", comment = \"up to 2002\"), person(\"Deepayan\", \"Sarkar\", role = \"ctb\", comment = \"up to 2005\"), person(\"EISPACK authors\", role = \"ctb\", comment = \"src/rs.f\"), person(\"Siem\", \"Heisterkamp\", role = \"ctb\", comment = \"Author fixed sigma\"), person(\"Bert\", \"Van Willigen\",role = \"ctb\", comment = \"Programmer fixed sigma\"), person(\"Johannes\", \"Ranke\", role = \"ctb\", comment = \"varConstProp()\"), person(\"R Core Team\", email = \"R-core@R-project.org\", role = c(\"aut\", \"cre\"), comment = c(ROR = \"02zz1nj61\")))",
+      "Contact": "see 'MailingList'",
+      "Description": "Fit and compare Gaussian linear and nonlinear mixed-effects models.",
+      "Depends": [
+        "R (>= 3.6.0)"
+      ],
+      "Imports": [
+        "graphics",
+        "stats",
+        "utils",
+        "lattice"
+      ],
+      "Suggests": [
+        "MASS",
+        "SASmixed"
+      ],
+      "LazyData": "yes",
+      "Encoding": "UTF-8",
+      "License": "GPL (>= 2)",
+      "BugReports": "https://bugs.r-project.org",
+      "MailingList": "R-help@r-project.org",
+      "URL": "https://svn.r-project.org/R-packages/trunk/nlme/",
+      "NeedsCompilation": "yes",
+      "Author": "José Pinheiro [aut] (S version), Douglas Bates [aut] (up to 2007), Saikat DebRoy [ctb] (up to 2002), Deepayan Sarkar [ctb] (up to 2005), EISPACK authors [ctb] (src/rs.f), Siem Heisterkamp [ctb] (Author fixed sigma), Bert Van Willigen [ctb] (Programmer fixed sigma), Johannes Ranke [ctb] (varConstProp()), R Core Team [aut, cre] (02zz1nj61)",
+      "Maintainer": "R Core Team <R-core@R-project.org>",
+      "Repository": "CRAN"
+    },
+    "numDeriv": {
+      "Package": "numDeriv",
+      "Version": "2016.8-1.1",
+      "Source": "Repository",
+      "Title": "Accurate Numerical Derivatives",
+      "Description": "Methods for calculating (usually) accurate numerical first and second order derivatives. Accurate calculations  are done using 'Richardson''s' extrapolation or, when applicable, a complex step derivative is available. A simple difference  method is also provided. Simple difference is (usually) less accurate but is much quicker than 'Richardson''s' extrapolation and provides a  useful cross-check.  Methods are provided for real scalar and vector valued functions.",
+      "Depends": [
+        "R (>= 2.11.1)"
+      ],
+      "LazyLoad": "yes",
+      "ByteCompile": "yes",
+      "License": "GPL-2",
+      "Copyright": "2006-2011, Bank of Canada. 2012-2016, Paul Gilbert",
+      "Author": "Paul Gilbert and Ravi Varadhan",
+      "Maintainer": "Paul Gilbert <pgilbert.ttv9z@ncf.ca>",
+      "URL": "http://optimizer.r-forge.r-project.org/",
+      "NeedsCompilation": "no",
+      "Repository": "CRAN"
+    },
     "renv": {
       "Package": "renv",
-      "Version": "1.1.4",
+      "Version": "1.1.5",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Project Environments",
@@ -92,6 +316,7 @@
         "covr",
         "cpp11",
         "devtools",
+        "generics",
         "gitcreds",
         "jsonlite",
         "jsonvalidate",
@@ -120,8 +345,123 @@
       "Config/testthat/parallel": "true",
       "Config/testthat/start-first": "bioconductor,python,install,restore,snapshot,retrieve,remotes",
       "NeedsCompilation": "no",
-      "Author": "Kevin Ushey [aut, cre] (<https://orcid.org/0000-0003-2880-7407>), Hadley Wickham [aut] (<https://orcid.org/0000-0003-4757-117X>), Posit Software, PBC [cph, fnd]",
+      "Author": "Kevin Ushey [aut, cre] (ORCID: <https://orcid.org/0000-0003-2880-7407>), Hadley Wickham [aut] (ORCID: <https://orcid.org/0000-0003-4757-117X>), Posit Software, PBC [cph, fnd]",
       "Maintainer": "Kevin Ushey <kevin@rstudio.com>",
+      "Repository": "CRAN"
+    },
+    "sandwich": {
+      "Package": "sandwich",
+      "Version": "3.1-1",
+      "Source": "Repository",
+      "Date": "2024-09-16",
+      "Title": "Robust Covariance Matrix Estimators",
+      "Authors@R": "c(person(given = \"Achim\", family = \"Zeileis\", role = c(\"aut\", \"cre\"), email = \"Achim.Zeileis@R-project.org\", comment = c(ORCID = \"0000-0003-0918-3766\")), person(given = \"Thomas\", family = \"Lumley\", role = \"aut\", email = \"t.lumley@auckland.ac.nz\", comment = c(ORCID = \"0000-0003-4255-5437\")), person(given = \"Nathaniel\", family = \"Graham\", role = \"ctb\", email = \"npgraham1@gmail.com\", comment = c(ORCID = \"0009-0002-1215-5256\")), person(given = \"Susanne\", family = \"Koell\", role = \"ctb\"))",
+      "Description": "Object-oriented software for model-robust covariance matrix estimators. Starting out from the basic  robust Eicker-Huber-White sandwich covariance methods include: heteroscedasticity-consistent (HC) covariances for cross-section data; heteroscedasticity- and autocorrelation-consistent (HAC) covariances for time series data (such as Andrews' kernel HAC, Newey-West, and WEAVE estimators); clustered covariances (one-way and multi-way); panel and panel-corrected covariances; outer-product-of-gradients covariances; and (clustered) bootstrap covariances. All methods are applicable to (generalized) linear model objects fitted by lm() and glm() but can also be adapted to other classes through S3 methods. Details can be found in Zeileis et al. (2020) <doi:10.18637/jss.v095.i01>, Zeileis (2004) <doi:10.18637/jss.v011.i10> and Zeileis (2006) <doi:10.18637/jss.v016.i09>.",
+      "Depends": [
+        "R (>= 3.0.0)"
+      ],
+      "Imports": [
+        "stats",
+        "utils",
+        "zoo"
+      ],
+      "Suggests": [
+        "AER",
+        "car",
+        "geepack",
+        "lattice",
+        "lme4",
+        "lmtest",
+        "MASS",
+        "multiwayvcov",
+        "parallel",
+        "pcse",
+        "plm",
+        "pscl",
+        "scatterplot3d",
+        "stats4",
+        "strucchange",
+        "survival"
+      ],
+      "License": "GPL-2 | GPL-3",
+      "URL": "https://sandwich.R-Forge.R-project.org/",
+      "BugReports": "https://sandwich.R-Forge.R-project.org/contact.html",
+      "NeedsCompilation": "no",
+      "Author": "Achim Zeileis [aut, cre] (<https://orcid.org/0000-0003-0918-3766>), Thomas Lumley [aut] (<https://orcid.org/0000-0003-4255-5437>), Nathaniel Graham [ctb] (<https://orcid.org/0009-0002-1215-5256>), Susanne Koell [ctb]",
+      "Maintainer": "Achim Zeileis <Achim.Zeileis@R-project.org>",
+      "Repository": "CRAN"
+    },
+    "stringmagic": {
+      "Package": "stringmagic",
+      "Version": "1.2.0",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Character String Operations and Interpolation, Magic Edition",
+      "Authors@R": "c(person(given = \"Laurent R\", family = \"Berge\", role = c(\"aut\", \"cre\"), email = \"laurent.berge@u-bordeaux.fr\", comment = c(ORCID = \"0000-0003-2736-1917\")), person(given = \"Morgan\", family = \"Jacob\", role = \"ctb\"))",
+      "Imports": [
+        "Rcpp(>= 1.0.5)",
+        "utils",
+        "stats"
+      ],
+      "Suggests": [
+        "knitr",
+        "rmarkdown",
+        "data.table"
+      ],
+      "LinkingTo": [
+        "Rcpp"
+      ],
+      "Description": "Performs complex string operations compactly and efficiently. Supports string interpolation jointly with over 50 string operations. Also enhances regular string functions (like grep() and co). See an introduction at <https://lrberge.github.io/stringmagic/>.",
+      "License": "GPL (>= 2)",
+      "Encoding": "UTF-8",
+      "BugReports": "https://github.com/lrberge/stringmagic/issues",
+      "URL": "https://lrberge.github.io/stringmagic/, https://github.com/lrberge/stringmagic",
+      "VignetteBuilder": "knitr",
+      "RoxygenNote": "7.3.2",
+      "NeedsCompilation": "yes",
+      "Author": "Laurent R Berge [aut, cre] (<https://orcid.org/0000-0003-2736-1917>), Morgan Jacob [ctb]",
+      "Maintainer": "Laurent R Berge <laurent.berge@u-bordeaux.fr>",
+      "Repository": "CRAN"
+    },
+    "zoo": {
+      "Package": "zoo",
+      "Version": "1.8-14",
+      "Source": "Repository",
+      "Date": "2025-04-09",
+      "Title": "S3 Infrastructure for Regular and Irregular Time Series (Z's Ordered Observations)",
+      "Authors@R": "c(person(given = \"Achim\", family = \"Zeileis\", role = c(\"aut\", \"cre\"), email = \"Achim.Zeileis@R-project.org\", comment = c(ORCID = \"0000-0003-0918-3766\")), person(given = \"Gabor\", family = \"Grothendieck\", role = \"aut\", email = \"ggrothendieck@gmail.com\"), person(given = c(\"Jeffrey\", \"A.\"), family = \"Ryan\", role = \"aut\", email = \"jeff.a.ryan@gmail.com\"), person(given = c(\"Joshua\", \"M.\"), family = \"Ulrich\", role = \"ctb\", email = \"josh.m.ulrich@gmail.com\"), person(given = \"Felix\", family = \"Andrews\", role = \"ctb\", email = \"felix@nfrac.org\"))",
+      "Description": "An S3 class with methods for totally ordered indexed observations. It is particularly aimed at irregular time series of numeric vectors/matrices and factors. zoo's key design goals are independence of a particular index/date/time class and consistency with ts and base R by providing methods to extend standard generics.",
+      "Depends": [
+        "R (>= 3.1.0)",
+        "stats"
+      ],
+      "Suggests": [
+        "AER",
+        "coda",
+        "chron",
+        "ggplot2 (>= 3.5.0)",
+        "mondate",
+        "scales",
+        "stinepack",
+        "strucchange",
+        "timeDate",
+        "timeSeries",
+        "tinyplot",
+        "tis",
+        "tseries",
+        "xts"
+      ],
+      "Imports": [
+        "utils",
+        "graphics",
+        "grDevices",
+        "lattice (>= 0.20-27)"
+      ],
+      "License": "GPL-2 | GPL-3",
+      "URL": "https://zoo.R-Forge.R-project.org/",
+      "NeedsCompilation": "yes",
+      "Author": "Achim Zeileis [aut, cre] (<https://orcid.org/0000-0003-0918-3766>), Gabor Grothendieck [aut], Jeffrey A. Ryan [aut], Joshua M. Ulrich [ctb], Felix Andrews [ctb]",
+      "Maintainer": "Achim Zeileis <Achim.Zeileis@R-project.org>",
       "Repository": "CRAN"
     }
   }

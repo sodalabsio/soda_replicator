@@ -1,0 +1,39 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{float}
+\usepackage[bf]{caption}
+\newcommand\fnote[1]{\captionsetup{font=footnotesize}\caption*{#1}}
+\usepackage{booktabs}
+
+\title{Results}
+\author{SoDa Labs}
+\date{October 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Summary Statistics}
+\input{tables/summary_statistics.tex}
+
+\begin{figure}
+  \centering
+  \caption{Precipitation and Population}
+  \label{fig:precipitation_population}
+  \includegraphics[width=\textwidth]{figures/precipitation_population.png}
+\fnote{\scriptsize \textit{Notes:} Precipitation and population of Australian cities.}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \caption{Temperature and Population}
+  \label{fig:temperature_population}
+  \includegraphics[width=\textwidth]{figures/temperature_population.png}
+\fnote{\scriptsize \textit{Notes:} Temperature and population of Australian cities.}
+\end{figure}
+
+\end{document}

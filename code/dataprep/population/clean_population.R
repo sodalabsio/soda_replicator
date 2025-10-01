@@ -15,5 +15,5 @@ population <- population[country == "Australia",]
 # Measure population in thousands
 population[, population := population / 1000]
 
-# Write to intermediate file storage
-fwrite(population, "../data/intermediate/population.csv")
+# Write to interim file storage
+fwrite(population, "../data/interim/population.csv")
