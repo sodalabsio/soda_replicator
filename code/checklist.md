@@ -1,4 +1,5 @@
 # Replication Checklist
+[Note: This is a sample template. Review and adapt to the specific context of your project.]
 
 Claude, check only elements selected with `[x]`.
 
@@ -31,15 +32,13 @@ Claude, check only elements selected with `[x]`.
 
 ## Data Verification
 - [ ] Checksums or data integrity checks are implemented where applicable
-- [ ] Missing values are handled explicitly
+- [ ] Missing values is documented and justified
 - [ ] Data merges specify join keys and handle unmatched observations
 - [ ] Sample restrictions are clearly documented
 - [ ] Outlier treatment is documented and justified
 
 ## Statistical Analysis
-- [ ] Regression specifications match theoretical framework
 - [ ] Standard errors are clustered/robust as appropriate
-- [ ] Fixed effects are implemented correctly
 - [ ] Sample weights are applied if necessary
 - [ ] Results are exported to `../paper/results/tables/` or `../paper/results/figures/`
 
@@ -52,7 +51,7 @@ Claude, check only elements selected with `[x]`.
 
 ## Output Generation
 - [ ] Table/figure output files have clear, consistent naming
-- [ ] Figures have appropriate labels, titles, and formatting
+- [ ] Figures have labels, titles, and formatting
 
 ## Version Control
 - [ ] Git repository is initialized with meaningful commits
