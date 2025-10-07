@@ -6,6 +6,8 @@ This repository provides a **template for reproducible, collaborative applied-ec
 
 ## How to Use This Repo
 
+Video tutorial for those who do not want to read the documentation: https://youtube.com/playlist?list=PLqlvVlXl5PP0NMi-91iG-HuafsIa_qcf6&si=d1mzORY3edhCzF7N.
+
 ### 1. Installation 🚀
 
 1.1  Download the [clean](https://github.com/cdueben/soda_replicator/tree/clean) template: **[Code › Download ZIP](https://github.com/cdueben/soda_replicator/archive/refs/heads/clean.zip)**.
