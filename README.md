@@ -1,5 +1,7 @@
 # Monash SoDa Replication Template Repository
 
+**Update: The template has moved into SoDa account: https://github.com/sodalabsio/soda_replicator.**
+
 This repository provides a **template for reproducible, collaborative applied-economics projects**. It contains a basic directory structure(`code/`, `paper/`, `data/`), starter scripts, virtual-environment stubs, and a replication checklist that feeds an automated AI code-review workflow. The [main](https://github.com/cdueben/soda_replicator/tree/main) branch contains example files to illustrate template use. Download the example-free [clean](https://github.com/cdueben/soda_replicator/tree/clean) branch at the outset of every study to lock in best-practice version control, hand-offs between co-authors and supervisors, and generation of replication packages.
 
 ---
