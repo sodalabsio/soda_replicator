@@ -1,4 +1,4 @@
-# Monash SoDa Replication Template Repository
+# Monash SoDa Replication Template
 
 This repository provides a **template for reproducible, collaborative applied-economics projects**. It contains a basic directory structure(`code/`, `paper/`, `data/`), starter scripts, virtual-environment stubs, and a replication checklist that feeds an automated AI code-review workflow. The [main](https://github.com/cdueben/soda_replicator/tree/main) branch contains example files to illustrate template use. Download the example-free [clean](https://github.com/cdueben/soda_replicator/tree/clean) branch at the outset of every study to lock in best-practice version control, hand-offs between co-authors and supervisors, and generation of replication packages.
 
@@ -6,13 +6,13 @@ This repository provides a **template for reproducible, collaborative applied-ec
 
 ## How to Use This Repo
 
-Video tutorial for those who do not want to read the documentation: https://youtube.com/playlist?list=PLqlvVlXl5PP0NMi-91iG-HuafsIa_qcf6&si=d1mzORY3edhCzF7N.
+Video tutorial for those who do not want to read the documentation or who need more extensive explanations: https://youtube.com/playlist?list=PLqlvVlXl5PP0NMi-91iG-HuafsIa_qcf6&si=d1mzORY3edhCzF7N.
 
 ### 1. Installation 🚀
 
 1.1  Download the [clean](https://github.com/cdueben/soda_replicator/tree/clean) template: **[Code › Download ZIP](https://github.com/cdueben/soda_replicator/archive/refs/heads/clean.zip)**.
 
-1.2  Unpack & rename the folder to your *project name* (Avoid namespace clashes).
+1.2  Unpack & rename the folder to your *project name*.
 
 1.3 Make sure you have Git installed and GitHub [configured](https://docs.github.com/en/get-started/git-basics/set-up-git).
 + **Tip:** New to Git? Follow the *Hello World* [tutorial](https://guides.github.com/activities/hello-world).
@@ -35,11 +35,13 @@ git push -u origin main
    + **Settings › Collaborators** → add co-authors & supervisors
    + (Optional) Protect `main` branch (enforce code review) & enable GitHub Actions
 
+1.9 Share the `data` folder with your collaborators through a cloud storage provider, like Dropbox or Google Drive.
+
 ### 2. Create the Project Checklist 📝
 
 2.1 Open `code/checklist.md` and `paper/checklist.md`.  
 
-2.2 With your co-authors/ supervisor, **outline steps** to fit *this* project’s data sources, methods, and outputs.  
+2.2 With your co-authors/ supervisor, **outline steps** to fit *this* project's data sources, methods, and outputs.  
 
 2.3 Commit changes:  
 
@@ -53,14 +55,14 @@ git push -u origin main
 
 ```bash
 project-root/
-├── code/        # dataprep, analysis scripts, renv/venv, tests
+├── code/        # empirical analysis code managed with Git
 |    ├── dataprep/
 |    ├── analysis/
-├── paper/       # manuscript and slides (LaTeX/Quarto/Markdown), figures, tables
+├── paper/       # manuscript, slides, figures, and tables managed with Git
 |    ├── draft/
 |    ├── presentation/
 |    └── results/
-└── data/        # <-- lives *outside* the Git repo!
+└── data/        # data shared through cloud storage provider
      ├── raw
      ├── interim/
      ├── analysis/
@@ -94,11 +96,9 @@ After each milestone:
 
 ### 6. Run the AI Code Checker 🤖
 
-GitHub Actions automatically:
-  + Restore the environment (renv.lock / requirements.txt).
-  + Read checklist.md for outstanding tasks.
-  + Lint code for style and reproducibility.
-  + Comment on your pull request.
+Invoke the AI checker with `@claude` in an issue or a pull request to:
+  + Read checklist.md.
+  + Evaluate to what extent the contents of the repository align with the checklist.
 
 ### 7. Create Final Replication Package for Submission
 
@@ -108,27 +108,35 @@ GitHub Actions automatically:
 
 ### 8. Useful Resources
 
-8.1 Coding, Data Science, and Reproducability & Replicability Guides
-+ [Grant McDermott - Data science for economists](https://github.com/uo-ec607/lectures)
+8.1 Video Tutorials on the SoDa Replicator
++ [Youtube Playlist](https://youtube.com/playlist?list=PLqlvVlXl5PP0NMi-91iG-HuafsIa_qcf6&si=d1mzORY3edhCzF7N)
+
+8.2 Coding, Data Science, and Reproducibility & Replicability Guides
++ [Grant McDermott - Data Science for Economists](https://github.com/uo-ec607/lectures)
 + [LOST - Library of Statistical Techniques](https://lost-stats.github.io/)
-+ [Dan Sullivan - Best Practise for Coding](https://www.danielmsullivan.com/pages/tutorial_workflow_3bestpractice.html)
++ [Dan Sullivan - Best Practices When Writing Code](https://www.danielmsullivan.com/pages/tutorial_workflow_3bestpractice.html)
 + [Model to Meaning](https://marginaleffects.com/)
 + [AEA Data Editor](https://aeadataeditor.github.io/aea-de-guidance/)
 + [Koenker & Zeileis - On Reproducible Econometric Research](http://www.econ.uiuc.edu/~roger/research/repro/)
 
-8.2 Stata
+8.3 Stata
 + [Poverty Action Lab Stata Guide](https://povertyaction.github.io/guides/cleaning/readme/)
 + [Asjad Naqvi - The Stata Guide](https://medium.com/the-stata-guide)
 + [Julian Reif - Stata Coding Guide](https://julianreif.com/guide/)
 
-8.3 R
+8.4 R
 + [Fixest Walkthrough](https://cran.r-project.org/web/packages/fixest/vignettes/fixest_walkthrough.html)
 + [R for Data Science](https://r4ds.hadley.nz/)
 + [Introduction to data.table](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html)
 + [Hans H. Sievertsen - Applied Economics with R](https://hhsievertsen.github.io/applied_econ_with_r/)
 
-8.4 Python
+8.5 Python
 + [Monash SoDa Labs - Web Scraping with Python](https://monashdatafluency.github.io/python-web-scraping/)
+
+8.6 LaTeX
++ [Overleaf](https://www.overleaf.com/)
++ [TeX Live](https://tug.org/texlive/)
++ [TeX Live Dev Container](https://github.com/sodalabsio/tex_live_dev_container)
 
 ---
 
@@ -246,23 +254,22 @@ This template includes a GitHub workflow for Claude Assistant, an AI-powered cod
 #### 2. Verify Workflow File
 The workflow file is already included at `.github/workflows/claude.yml`. It will automatically:
 - Trigger on issue comments, pull request comments, and reviews
-- Respond to issues being opened, assigned, or labeled
-- Use GitHub's built-in GITHUB_TOKEN for repository access
+- Respond to issues being opened or assigned
+- Use GitHub's built-in `GITHUB_TOKEN` for repository access
 
 #### 3. How It Works
 Claude will automatically respond to:
 - New issue comments
 - New pull request review comments
-- Issues being opened, assigned, or labeled
+- Issues being opened or assigned
 - Pull request reviews being submitted
 
 #### 4. Testing
 To test the workflow:
 1. Create a new issue in your repository
-2. Comment on the issue mentioning Claude or asking a question
+2. Comment on the issue mentioning `@claude`
 3. Claude should respond automatically within a few minutes
 
 ### Notes
-- The action uses the @beta tag, which may be subject to changes
-- Ensure your API key has sufficient usage limits
+- Ensure your Anthropic API key has sufficient usage limits
 - Monitor GitHub Actions usage to avoid unexpected costs
